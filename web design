@@ -1,0 +1,6 @@
+bauhaus-design/
+├─ app/                ← 首页 + 生成页面
+├─ public/             ← 包豪斯字体 + 图标
+├─ components/         ← 上传组件 + 风格切换按钮
+├─ lib/                ← API routes
+└─ workflow/           ← ComfyUI 完整工作流  
