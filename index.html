@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bauhaus-design.com – AI Design Community in Dessau</title>
+<meta name="description" content="Bauhaus thinking. AI tools. An AI design community in Dessau: club, workshops, events and exhibitions.">
+<meta property="og:title" content="bauhaus-design.com – Bauhaus thinking. AI tools.">
+<meta property="og:description" content="An AI design community in Dessau, the city where the Bauhaus moved in 1925.">
+<meta property="og:url" content="https://bauhaus-design.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F2EFE8'/%3E%3Ccircle cx='9' cy='16' r='6' fill='%23D7322B'/%3E%3Crect x='17' y='10' width='12' height='12' fill='%231F4FA3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111111; --paper:#F2EFE8; --white:#FFFFFF;
+  --red:#D7322B; --red-text:#B02A22; --blue:#1F4FA3; --yellow:#F2C230; --ochre:#8A6A00;
+  --muted:#444444; --muted-dark:#CFCBC2;
+  --line:2px solid var(--ink);
+  --display:'Space Grotesk', system-ui, sans-serif;
+  --body:'Inter', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.5}
+a{color:var(--ink)} a:hover{color:var(--blue)}
+img{max-width:100%}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-0.02em}
+p{margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.section{border-top:var(--line)}
+.section .wrap{padding-top:96px;padding-bottom:96px}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.h2{font-size:clamp(36px,4vw,56px);line-height:1}
+.lead{font-size:18px;line-height:1.6;color:#333}
+.stack{display:flex;flex-direction:column;gap:12px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16px;padding:16px 28px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--blue);border-color:var(--blue);color:var(--white)}
+.btn-outline{background:transparent;color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;background:var(--ink);color:var(--paper);padding:12px 16px;z-index:10}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* nav */
+header{border-bottom:var(--line);background:var(--paper);position:sticky;top:0;z-index:5}
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:20px}
+.marks{display:flex;gap:4px;align-items:center}
+.m-circle{width:14px;height:14px;border-radius:50%;background:var(--red)}
+.m-square{width:14px;height:14px;background:var(--blue)}
+.m-tri{width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:14px solid var(--yellow)}
+.menu{display:flex;flex-wrap:wrap;gap:28px;font-size:15px;font-weight:500;align-items:center}
+.menu a{text-decoration:none;padding:12px 0}
+.menu .join{padding:12px 20px;background:var(--ink);color:var(--paper)}
+.menu .join:hover{background:var(--blue);color:var(--white)}
+
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:64px;align-items:center;padding-top:80px;padding-bottom:96px}
+.hero-text{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.hero h1{font-weight:700;font-size:clamp(48px,7vw,96px);line-height:.95;letter-spacing:-.03em}
+.hero h1 span{color:var(--blue)}
+.hero-sub{font-size:20px;line-height:1.55;max-width:560px;color:#333}
+.actions{display:flex;flex-wrap:wrap;gap:16px}
+.compo{flex:1 1 420px;min-width:0;max-width:520px;aspect-ratio:1/1;display:grid;grid-template-columns:1fr 1fr;border:var(--line)}
+.compo div{display:flex;align-items:center;justify-content:center}
+.c1{background:var(--red)}
+.c2{border-left:var(--line)}
+.c2 i{width:70%;aspect-ratio:1/1;border-radius:50%;background:var(--ink);display:block}
+.c3{border-top:var(--line);align-items:flex-end!important}
+.c3 i{width:80%;aspect-ratio:1/.86;background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%);display:block}
+.c4{background:var(--blue);border-top:var(--line);border-left:var(--line)}
+
+/* pillars */
+.pillars{border-top:var(--line);border-bottom:var(--line);background:var(--white)}
+.pillars .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.pillars a{text-decoration:none;padding:28px 24px;display:flex;flex-direction:column;gap:6px;border-left:var(--line);font-family:var(--display)}
+.pillars a:last-child{border-right:var(--line)}
+.pillars small{font-size:14px;font-weight:700}
+.pillars strong{font-size:22px}
+
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px}
+.dark{background:var(--ink);color:var(--paper)}
+.dark .lead{color:var(--muted-dark)}
+.tool{border:2px solid var(--paper);padding:32px;display:flex;flex-direction:column;gap:16px}
+.tool h3{font-size:24px}
+.tool p{font-size:16px;line-height:1.55;color:var(--muted-dark)}
+.tool a{margin-top:auto;color:var(--yellow);font-weight:600;padding:12px 0}
+.shape-c{width:48px;height:48px;border-radius:50%;background:var(--red)}
+.shape-s{width:48px;height:48px;background:var(--blue);border:2px solid var(--paper)}
+.shape-t{width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:46px solid var(--yellow)}
+
+/* club */
+.split{display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start}
+.split > *{flex:1 1 440px;min-width:0}
+.list{border:var(--line);background:var(--white)}
+.list-item{padding:24px 28px;display:flex;gap:20px;align-items:flex-start;border-bottom:var(--line)}
+.list-item:last-child{border-bottom:none}
+.list-item h3{font-size:20px}
+.list-item p{font-size:15px;color:var(--muted);margin-top:4px}
+.i-c{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--red)}
+.i-s{flex:0 0 auto;width:28px;height:28px;background:var(--blue)}
+.i-t{flex:0 0 auto;width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-bottom:26px solid var(--yellow)}
+.i-o{flex:0 0 auto;width:28px;height:28px;border:3px solid var(--ink)}
+
+/* courses */
+.white{background:var(--white)}
+.course{border:var(--line);display:flex;flex-direction:column}
+.course .bar{height:12px}
+.course .body{padding:28px;display:flex;flex-direction:column;gap:12px;flex:1 1 auto}
+.course .meta{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#555}
+.course h3{font-size:26px;line-height:1.15}
+.course p{font-size:16px;color:var(--muted)}
+.course .foot{margin-top:auto;padding-top:16px;border-top:var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600}
+.course .foot a{padding:12px 0}
+.group{margin-top:24px;border:var(--line);background:var(--paper);padding:28px 32px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+.group p{font-size:18px;max-width:760px}
+
+/* events */
+.events{border-top:var(--line);margin-top:48px}
+.event{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;padding:28px 0;border-bottom:var(--line)}
+.event .date{flex:0 0 140px;font-family:var(--display);font-size:22px;font-weight:700}
+.tag{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px}
+.event .title{flex:1 1 320px;min-width:0;font-family:var(--display);font-size:24px;font-weight:500}
+.event a{font-weight:600;padding:12px 0}
+
+/* dessau */
+.blue{background:var(--blue);color:var(--white)}
+.blue .wrap{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.blue h2{flex:1 1 480px;min-width:0;font-size:clamp(36px,4.5vw,64px);line-height:1}
+.blue p{flex:1 1 400px;min-width:0;font-size:19px;line-height:1.6}
+
+/* join */
+.yellow{background:var(--yellow)}
+.form{background:var(--paper);border:var(--line);padding:32px;display:flex;flex-direction:column;gap:20px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label,legend{font-weight:600;font-size:15px}
+.field input{border:var(--line);background:var(--white);padding:14px;font:inherit;font-size:16px}
+fieldset{border:none;margin:0;padding:0}
+legend{padding:0;margin-bottom:12px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.checks label{display:flex;align-items:center;gap:10px;font-size:16px;min-height:44px}
+.checks input{width:20px;height:20px;accent-color:var(--ink)}
+.form .btn{align-self:flex-start}
+.small{font-size:13px;color:var(--muted)}
+
+/* footer */
+footer{border-top:var(--line);background:var(--ink);color:var(--muted-dark)}
+footer .wrap{padding-top:40px;padding-bottom:40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;font-size:14px;line-height:1.6}
+footer a{color:var(--paper);padding:8px 0}
+footer nav{display:flex;gap:24px}
+
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  .section .wrap{padding-top:64px;padding-bottom:64px}
+  .menu{gap:16px;font-size:14px}
+  .hero{padding-top:48px;padding-bottom:64px;gap:40px}
+  .pillars a{border-left:none;border-bottom:var(--line)}
+  .pillars a:last-child{border-right:none;border-bottom:none}
+  .checks{grid-template-columns:1fr}
+  .event .date{flex-basis:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a class="logo" href="#top">
+      <span class="marks" aria-hidden="true"><span class="m-circle"></span><span class="m-square"></span><span class="m-tri"></span></span>
+      bauhaus-design.com
+    </a>
+    <div class="menu">
+      <a href="#studio">AI Studio</a>
+      <a href="#club">Club</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#events">Events</a>
+      <a class="join" href="#join">Join</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<section id="top" class="wrap hero">
+  <div class="hero-text">
+    <p class="eyebrow">AI Design Community · Dessau</p>
+    <h1>Bauhaus<br>thinking.<br><span>AI tools.</span></h1>
+    <p class="hero-sub">A community in Dessau for people who design with AI: learn the Bauhaus principles, make work together, and show it to the world.</p>
+    <div class="actions">
+      <a class="btn" href="#join">Join the club</a>
+      <a class="btn btn-outline" href="#workshops">See workshops</a>
+    </div>
+  </div>
+  <div class="compo" aria-hidden="true">
+    <div class="c1"></div>
+    <div class="c2"><i></i></div>
+    <div class="c3"><i></i></div>
+    <div class="c4"></div>
+  </div>
+</section>
+
+<section class="pillars" aria-label="What we do">
+  <div class="wrap">
+    <a href="#studio"><small style="color:var(--red-text)">01</small><strong>AI Design Studio</strong></a>
+    <a href="#club"><small style="color:var(--blue)">02</small><strong>Community Club</strong></a>
+    <a href="#workshops"><small style="color:var(--ochre)">03</small><strong>Workshops &amp; Courses</strong></a>
+    <a href="#events"><small>04</small><strong>Events &amp; Exhibitions</strong></a>
+  </div>
+</section>
+
+<section id="studio" class="dark">
+  <div class="wrap" style="padding-top:96px;padding-bottom:96px">
+    <div class="stack" style="max-width:760px;margin-bottom:48px">
+      <p class="eyebrow" style="color:var(--yellow)">01 — AI Design Studio</p>
+      <h2 class="h2">The workshop, rebuilt for the AI age</h2>
+      <p class="lead">The Bauhaus joined art, craft and technology. Our tools do the same with AI: shape, colour, grid and type, made easy for everyone.</p>
+    </div>
+    <div class="grid3">
+      <article class="tool">
+        <div class="shape-c" aria-hidden="true"></div>
+        <h3>Poster Generator</h3>
+        <p>Turn a photo or a sentence into a Bauhaus-style poster: geometry, primary colours, clean type.</p>
+        <a href="#join">Get early access →</a>
+      </article>
+      <article class="tool">
+        <div class="shape-s" aria-hidden="true"></div>
+        <h3>Design Critic</h3>
+        <p>Upload your design and get feedback on form, function, colour and grid, based on Bauhaus principles.</p>
+        <a href="#join">Get early access →</a>
+      </article>
+      <article class="tool">
+        <div class="shape-t" aria-hidden="true"></div>
+        <h3>Colour &amp; Form Lab</h3>
+        <p>Play with colour theory and basic shapes, inspired by the classic Vorkurs, with AI as your sparring partner.</p>
+        <a href="#join">Get early access →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="club" class="section">
+  <div class="wrap split">
+    <div class="stack" style="gap:20px">
+      <p class="eyebrow" style="color:var(--blue)">02 — Community Club</p>
+      <h2 class="h2">Design is better together</h2>
+      <p class="lead">Designers, students, makers and the simply curious. Meet in Dessau or online, share work, and learn from each other, the way the Bauhaus masters and students did.</p>
+      <p><a class="btn" href="#join">Become a member</a></p>
+    </div>
+    <div class="list">
+      <div class="list-item"><span class="i-c" aria-hidden="true"></span><div><h3>Monthly meetups</h3><p>Talks, demos and new AI tools, every [DAY OF MONTH].</p></div></div>
+      <div class="list-item"><span class="i-s" aria-hidden="true"></span><div><h3>Critique nights</h3><p>Bring your work, get honest, friendly feedback.</p></div></div>
+      <div class="list-item"><span class="i-t" aria-hidden="true"></span><div><h3>Design challenges</h3><p>A monthly brief. Best entries go into the next exhibition.</p></div></div>
+      <div class="list-item"><span class="i-o" aria-hidden="true"></span><div><h3>Bauhaus walks</h3><p>Explore Dessau’s modernist architecture together and sketch on site.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="workshops" class="section white">
+  <div class="wrap">
+    <div class="stack" style="max-width:720px;margin-bottom:48px">
+      <p class="eyebrow" style="color:var(--ochre)">03 — Workshops &amp; Courses</p>
+      <h2 class="h2">Learn the Bauhaus way, with AI</h2>
+      <p class="lead">Hands-on courses for beginners, students and professionals. In English, German and Chinese.</p>
+    </div>
+    <div class="grid3">
+      <article class="course">
+        <div class="bar" style="background:var(--red)" aria-hidden="true"></div>
+        <div class="body">
+          <p class="meta">Beginner · 1 day</p>
+          <h3>Bauhaus Basics × AI</h3>
+          <p>Shape, colour and composition, then bring your ideas to life with AI image tools.</p>
+          <div class="foot"><span>[DATE] · [PRICE]</span><a href="#join">Book →</a></div>
+        </div>
+      </article>
+      <article class="course">
+        <div class="bar" style="background:var(--blue)" aria-hidden="true"></div>
+        <div class="body">
+          <p class="meta">Intermediate · 4 weeks</p>
+          <h3>Typography &amp; Grid with AI</h3>
+          <p>Posters, layouts and brand basics: modernist rules, AI-assisted workflow.</p>
+          <div class="foot"><span>[DATE] · [PRICE]</span><a href="#join">Book →</a></div>
+        </div>
+      </article>
+      <article class="course">
+        <div class="bar" style="background:var(--yellow)" aria-hidden="true"></div>
+        <div class="body">
+          <p class="meta">All levels · Weekend</p>
+          <h3>Vibe Coding for Designers</h3>
+          <p>Build your own small design app with AI, no programming background needed.</p>
+          <div class="foot"><span>[DATE] · [PRICE]</span><a href="#join">Book →</a></div>
+        </div>
+      </article>
+    </div>
+    <div class="group">
+      <p><strong>For schools, companies and study trips:</strong> custom Bauhaus × AI workshops in Dessau or at your place.</p>
+      <a class="btn btn-outline" href="#join">Request a group workshop</a>
+    </div>
+  </div>
+</section>
+
+<section id="events" class="section">
+  <div class="wrap">
+    <div class="stack" style="max-width:760px">
+      <p class="eyebrow">04 — Events &amp; Exhibitions</p>
+      <h2 class="h2">Made by the community, shown to the world</h2>
+      <p class="lead">Member shows, open calls and AI design exhibitions, in Dessau and online.</p>
+    </div>
+    <div class="events">
+      <div class="event">
+        <span class="date">[DATE]</span>
+        <span class="tag" style="background:var(--red-text);color:var(--white)">Exhibition</span>
+        <span class="title">Form × Algorithm: AI design by the community</span>
+        <a href="#join">Details →</a>
+      </div>
+      <div class="event">
+        <span class="date">[DATE]</span>
+        <span class="tag" style="background:var(--blue);color:var(--white)">Open call</span>
+        <span class="title">Submit your AI poster for the next member show</span>
+        <a href="#join">Submit →</a>
+      </div>
+      <div class="event">
+        <span class="date">[DATE]</span>
+        <span class="tag" style="background:var(--yellow)">Meetup</span>
+        <span class="title">Community night: new AI tools and show &amp; tell</span>
+        <a href="#join">RSVP →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section blue" aria-label="Why Dessau">
+  <div class="wrap">
+    <h2>Why Dessau? Because this is where it happened.</h2>
+    <p>The Bauhaus moved to Dessau in 1925 and changed design forever. A century later, we gather in the same city to ask what Bauhaus thinking means when the tools are intelligent.</p>
+  </div>
+</section>
+
+<section id="join" class="section yellow">
+  <div class="wrap split">
+    <div class="stack" style="gap:16px">
+      <p class="eyebrow">Join</p>
+      <h2 class="h2">Be part of the first members</h2>
+      <p class="lead" style="color:var(--ink)">Sign up for news on meetups, workshops, open calls and early access to the AI tools.</p>
+      <p style="font-size:18px;font-weight:600"><a href="mailto:hello@bauhaus-design.com">hello@bauhaus-design.com</a></p>
+    </div>
+    <!-- Replace YOUR_FORM_ID with your Formspree form ID (https://formspree.io), or another form service -->
+    <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="field">
+        <label for="j-name">Name</label>
+        <input id="j-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="j-email">Email</label>
+        <input id="j-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <fieldset>
+        <legend>I’m interested in</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="interest" value="club"> Club &amp; meetups</label>
+          <label><input type="checkbox" name="interest" value="workshops"> Workshops</label>
+          <label><input type="checkbox" name="interest" value="exhibitions"> Exhibitions</label>
+          <label><input type="checkbox" name="interest" value="ai-tools"> AI tools</label>
+        </div>
+      </fieldset>
+      <p class="small">We only use your details to send community updates. See our <a href="datenschutz.html">privacy policy</a>.</p>
+      <button class="btn" type="submit">Sign up</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="max-width:720px">bauhaus-design.com is an independent community project based in Dessau. Not affiliated with the Stiftung Bauhaus Dessau or with BAUHAUS retail stores.</p>
+    <nav aria-label="Legal">
+      <a id="imprint" href="impressum.html">Impressum</a>
+      <a id="privacy" href="datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
