@@ -3,7 +3,7 @@
 **Bauhaus thinking. AI tools.**
 An AI design community in Dessau, the city where the Bauhaus moved in 1925.
 
-**包豪斯思维 × AI 工具** —— 一个立足德绍的 AI 设计社区。
+**包豪斯思维 × AI 工具** —— 一个立足德国Dessau的 AI 设计社区。
 
 ---
 
@@ -11,7 +11,7 @@ An AI design community in Dessau, the city where the Bauhaus moved in 1925.
 
 bauhaus-design.com brings Bauhaus principles (form, function, colour, grid, typography) together with today's AI tools. It is a place to **learn, make and show** design, both online and on site in Dessau.
 
-把包豪斯的设计原则（形式、功能、色彩、网格、字体）和今天的 AI 工具结合起来，打造一个可以**学习、创作、展示**的设计社区，线上线下结合，扎根德绍。
+把包豪斯的设计原则（形式、功能、色彩、网格、字体）和今天的 AI 工具结合起来，打造一个可以**学习、创作、展示**的设计社区，线上线下结合，扎根德国Dessau。
 
 ## Four pillars / 四大板块
 
@@ -26,7 +26,7 @@ bauhaus-design.com brings Bauhaus principles (form, function, colour, grid, typo
 
 Start as a **showcase & community platform**: members design with their own AI tools (Claude, Midjourney, Figma, Cursor …) and publish, compete and exhibit here. In-platform AI is added later as a few **narrow, Bauhaus-specific tools** with usage limits, not as a general vibe-coding platform.
 
-先做**展示与社区平台**：用户用自己的 AI 工具设计，到这里发布、参加挑战和展览。之后再加入几个**小而专的包豪斯 AI 工具**（有使用额度），不做通用 vibe coding 平台。
+**展示与社区平台**：用户用自己的 AI 工具设计，到这里发布、参加挑战和展览。之后将加入几个**小而专的包豪斯 AI 工具**（有使用额度），不做通用 vibe coding 平台。
 
 ## Roadmap / 路线图
 
