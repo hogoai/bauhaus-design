@@ -168,3 +168,6 @@ h1,h2{text-wrap:balance}
 
 /* avoid single-word last lines in paragraphs */
 p{text-wrap:pretty}
+
+/* Chinese: wrap only at punctuation/spaces; break inside a phrase only if it can't fit */
+html[lang="zh-Hans"] p,html[lang="zh-Hans"] h3,html[lang="zh-Hans"] .title,html[lang="zh-Hans"] label,html[lang="zh-Hans"] legend{word-break:keep-all;overflow-wrap:anywhere}
