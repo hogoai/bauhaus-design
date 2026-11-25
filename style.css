@@ -171,3 +171,44 @@ p{text-wrap:pretty}
 
 /* Chinese: wrap only at punctuation/spaces; break inside a phrase only if it can't fit */
 html[lang="zh-Hans"] p,html[lang="zh-Hans"] h3,html[lang="zh-Hans"] .title,html[lang="zh-Hans"] label,html[lang="zh-Hans"] legend{word-break:keep-all;overflow-wrap:anywhere}
+
+/* ===== Bauhaus Tour ===== */
+.tour-hero h1 span{color:var(--red)}
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border-top:var(--line);border-left:var(--line)}
+.timeline li{padding:24px;border-right:var(--line);border-bottom:var(--line);display:flex;flex-direction:column;gap:8px;background:var(--white)}
+.timeline .tl-year{font-family:var(--display);font-size:40px;font-weight:700;line-height:1;letter-spacing:-.02em}
+.timeline .tl-key{background:var(--yellow)}
+.timeline h3{font-size:20px}
+.timeline p{font-size:15px;color:var(--muted)}
+.timeline .tl-key p{color:var(--ink)}
+.grid4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.shape-o{width:48px;height:48px;border:4px solid var(--paper);border-radius:50%;box-sizing:border-box}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.people article{border:var(--line);background:var(--white);padding:24px;display:flex;flex-direction:column;gap:6px}
+.people h3{font-size:20px;margin-top:8px}
+.people .years{font-size:13px;font-weight:600;letter-spacing:.06em;color:#555}
+.people p{font-size:15px;color:var(--muted)}
+.dot{width:28px;height:28px;border-radius:50%;display:block}
+.dot.sq{border-radius:0}
+.dot.tri{width:0;height:0;border-radius:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:26px solid var(--red)}
+.route{list-style:none;margin:48px 0 0;padding:0;border-top:var(--line)}
+.route li{display:flex;gap:24px;align-items:flex-start;padding:28px 0;border-bottom:var(--line)}
+.route .num{flex:0 0 56px;height:56px;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--paper);font-family:var(--display);font-size:24px;font-weight:700}
+.route li:nth-child(3n+1) .num{background:var(--red-text);color:var(--white)}
+.route li:nth-child(3n+2) .num{background:var(--blue);color:var(--white)}
+.route li:nth-child(3n) .num{background:var(--yellow);color:var(--ink)}
+.route h3{font-size:24px}
+.route .meta-line{font-size:13px;font-weight:600;letter-spacing:.06em;color:#555;margin:4px 0 8px}
+.route p{font-size:16px;color:var(--muted);max-width:720px}
+html[lang="zh-Hans"] .timeline p,html[lang="zh-Hans"] .people p,html[lang="zh-Hans"] .route p{word-break:keep-all;overflow-wrap:anywhere}
+@media (max-width:640px){
+  .route li{gap:16px}
+  .route .num{flex-basis:44px;height:44px;font-size:20px}
+  .timeline .tl-year{font-size:32px}
+}
+.timeline{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cols3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:960px){.timeline{grid-template-columns:repeat(2,minmax(0,1fr))}.cols3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.timeline,.cols3{grid-template-columns:1fr}}
+/* Chinese: long clauses in small text read better with normal CJK wrapping */
+html[lang="zh-Hans"] .timeline p,html[lang="zh-Hans"] .group p,html[lang="zh-Hans"] footer p{word-break:normal;overflow-wrap:normal;line-break:strict}

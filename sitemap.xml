@@ -18,4 +18,22 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://bauhaus-design.com/de/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bauhaus-design.com/zh/"/>
   </url>
+  <url>
+    <loc>https://bauhaus-design.com/tour/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bauhaus-design.com/tour/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bauhaus-design.com/de/tour/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bauhaus-design.com/zh/tour/"/>
+  </url>
+  <url>
+    <loc>https://bauhaus-design.com/de/tour/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bauhaus-design.com/tour/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bauhaus-design.com/de/tour/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bauhaus-design.com/zh/tour/"/>
+  </url>
+  <url>
+    <loc>https://bauhaus-design.com/zh/tour/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bauhaus-design.com/tour/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bauhaus-design.com/de/tour/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://bauhaus-design.com/zh/tour/"/>
+  </url>
 </urlset>
