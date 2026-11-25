@@ -158,3 +158,10 @@ html[lang="zh-Hans"] body{font-family:'Inter','Noto Sans SC',system-ui,sans-seri
 html[lang="zh-Hans"] h1,html[lang="zh-Hans"] h2,html[lang="zh-Hans"] h3,html[lang="zh-Hans"] .logo,html[lang="zh-Hans"] .pillars a,html[lang="zh-Hans"] .event .title,html[lang="zh-Hans"] .event .date{font-family:'Space Grotesk','Noto Sans SC',system-ui,sans-serif;letter-spacing:0}
 html[lang="zh-Hans"] .hero h1{line-height:1.1}
 html[lang="zh-Hans"] .eyebrow{letter-spacing:.08em}
+
+/* headline line breaks: keep phrases together, balance lines */
+.nb{display:inline-block}
+h1,h2{text-wrap:balance}
+@media (max-width:640px){
+  html[lang="zh-Hans"] .h2,html[lang="zh-Hans"] .blue h2{font-size:30px;line-height:1.2}
+}
